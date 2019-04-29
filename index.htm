@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<hmtl>
+<head>
+    <link rel="stylesheet" href="winningracer.css">
+    <script src="./js/winningracer.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron&text=0123456789:AMP' rel='stylesheet' type='text/css'>
+</head>
+<body onload='winningracer.init()'>
+    <div style="display: inline-block; text-align: center; width:100%">
+        <span class="clock" id='spanTimer'></span>
+    </div>
+    <div style="display: inline-block; text-align: center; width:100%;">
+        <button id="btnPause" style="display:none;" >PAUSE</button> 
+        <button id="btnStartStop" value="START" onclick="winningracer.btnStartStopClick()" >START</button>
+    </div>
+</body>
+</hmtl>
