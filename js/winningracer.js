@@ -1,5 +1,19 @@
 
-var btnPause = document.getElementById("btnPause");
+window.ipcRenderer.on('StartStopTimer', (event, arg) => {
+    if (arg=='Start'){
+        winningracer.localTimerStart();
+        return;
+    }
+    if (arg=='Stop'){
+        winningracer.localTimerStop();
+        return;
+    }
+    
+    if (arg=="Pause"){
+
+    }
+
+})
 
 var winningracer = {
     startSeconds: null,
@@ -8,29 +22,17 @@ var winningracer = {
     seconds: 0,
     minutes: 0,
     hours: 0,
-    btnStartStop: null,
     milliseconds: 0,
     localTimerRunning: false,
 
     init: function () {
         winningracer.uiManager = setInterval (function() {winningracer.uiControl()}, 100);
-        btnStartStop = document.getElementById("btnStartStop");
         winningracer.hours = "00";
         winningracer.minutes = "00";
         winningracer.seconds = "00";
         winningracer.milliseconds = "0";
     },
 
-    btnStartStopClick: function () {
-        console.log (document.getElementById("btnStartStop").value);
-
-        if (document.getElementById("btnStartStop").value == "START"){
-            winningracer.localTimerStart();
-        }
-        else {
-            winningracer.localTimerStop();
-        }
-    },
     uiControl: function(){
         if (winningracer.localTimerRunning) {
             var duration = Math.round( (new Date().getTime() - winningracer.startTime));
@@ -57,16 +59,12 @@ var winningracer = {
         winningracer.startTime = winningracer.startSeconds;
     
         winningracer.localTimerRunning = true;
-        document.getElementById("btnStartStop").innerHTML = "STOP";
-        document.getElementById("btnStartStop").value = "STOP";
-        document.getElementById("btnPause").style.display = "inline-block";
+
        
     },
 
     localTimerStop: function () {
         winningracer.localTimerRunning = false;
-        document.getElementById("btnStartStop").value = "START";
-        document.getElementById("btnStartStop").innerHTML = "START";
-        document.getElementById("btnPause").style.display = "none";
+
     }
 }
