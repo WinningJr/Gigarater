@@ -1,109 +1,118 @@
 @font-face {
-    font-family: 'digital';
-    src: url('./resources/digital-7 (mono).ttf');
+  font-family: 'digital';
+  src: url('./resources/digital-7 (mono).ttf');
+}
+
+html {
+  padding: 0px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 9px 15px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 20px;
+  width: 98px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+h2 {
+  margin: 0px;
+}
+  
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+  
+img.logo {
+  width: 22px;
+  height: 24px;
+  border-radius: 50%;
+  margin-bottom: -4px;
+}
+  
+button:hover {
+  opacity: 0.8;
+}
+button:active:hover {
+  background-color: rgb(36, 109, 39);
+}
+
+.burgerMenuDiv {
+  display: none;
+  position: absolute; 
+  z-index: 1; /* Sit on top */
+  left: 0;
+  width: 200px;
+  height: 600px; 
+  overflow: auto; 
+  background-color:  rgb(77, 76, 76);
+  animation-name: slideFromLeft;
+  animation-duration: 0.4s;
+  border-radius: 0px 5px 5px 0px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2),2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.burgerMenuItem {
+  border-bottom: 1px white solid; 
+  height: 33px; color:white; 
+  padding: 18px 0px 0px 10px;
+}
+
+.burgerMenuItem:hover {
+  background-color: #888;
+}
+
+.burgerMenuItem:active {
+  background-color: rgb(48, 47, 47);
+}
+
+.buttonHolder {
+  background-color: #f1f1f1;
+  padding: 16px;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
 }
 
 
 .clock {
-    font-family: 'digital'; 
-    color:red; 
-    background-color: black;
-    font-size: 42px;
-    padding-right: 6px;
-    padding-left: 6px;
+  font-family: 'digital'; 
+  color:red; 
+  background-color:rgb(13, 0, 29);
+  font-size: 42px;
+  padding-right: 6px;
+  padding-left: 6px;
 }
 
-
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 9px 15px;
-    margin: 8px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 20px;
-    width: 98px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    margin-left: 2px;
-    margin-right: 2px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-h2 {
-    margin: 0px;
-  }
-  
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
-  
-  img.logo {
-    width: 22px;
-    height: 24px;
-    border-radius: 50%;
-    margin-bottom: -4px;
-  }
-   
-  button:hover {
-    opacity: 0.8;
-  }
-  button:active:hover {
-    background-color: rgb(36, 109, 39);
-  }
-  
-  .burgerMenuDiv {
-    display: none;
-    position: absolute; 
-    z-index: 1; /* Sit on top */
-    left: 0;
-    width: 200px;
-    height: 600px; 
-    overflow: auto; 
-    background-color:  rgb(77, 76, 76);
-    animation-name: slideFromLeft;
-    animation-duration: 0.4s;
-    border-radius: 0px 5px 5px 0px;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.2),2px 2px rgba(0, 0, 0, 0.3);
-  }
-  
-  .burgerMenuItem {
-    border-bottom: 1px white solid; 
-    height: 33px; color:white; 
-    padding: 18px 0px 0px 10px;
-  }
-  
-  .burgerMenuItem:hover {
-    background-color: #888;
-  }
-  
-  .burgerMenuItem:active {
-    background-color: rgb(48, 47, 47);
-  }
-  
-  .buttonHolder {
-    background-color: #f1f1f1;
-    padding: 16px;
-  }
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-  
-  .container { 
+.container { 
     padding: 16px;
   }
   
-  .closeButton {
+.closeButton {
     position: absolute;
     float: right;
     top: 0;
@@ -112,7 +121,7 @@ h2 {
     width: 24px;
   } 
    
-  .closeHighlighter {
+.closeHighlighter {
     display:none;
     position: absolute;
     float: right;
@@ -124,29 +133,29 @@ h2 {
     background-color: red;
   }
   
-  .dialogTopBar {
+.dialogTopBar {
     position: relative;
     height:25px;
     /* border-bottom:  1px #909090 solid; */
   }
   
-  .dialogHeader {
+.dialogHeader {
     font-size: 22px;
     font-weight: bold;
     margin: 0px 0px 8px 0px;
   }
   
-  .greyContainer {
+.greyContainer {
     background-color:#f1f1f1;
     padding: 6px;
   }
   
-  .imgcontainer {
+.imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
   }
   
-  .login {
+.login {
     width:360px;
     margin: auto auto; 
     border: 1px solid #888;
@@ -154,7 +163,7 @@ h2 {
     background-color: white;
   }
    
-  .mainBody {
+.mainBody {
     /* background-image: url(../images/blackBG.jpg);
     background-repeat: repeat;  */
     /* height: 100%; */
@@ -168,7 +177,7 @@ h2 {
     z-index:99; */
   }
   
-  .messageDialog {
+.messageDialog {
     width:460px;
     margin: auto auto; 
     border: 1px solid #888;
@@ -176,21 +185,21 @@ h2 {
     background-color: white;
   }
   
-  .crossMenuItem {
+.crossMenuItem {
     display: inline-block;
     padding: 0px 8px 0px 8px !important;
     padding: 0px;
     margin: 0px;
   }
   
-  .menuDividerItem {
+.menuDividerItem {
     border-left: 1px #909090 solid;
     display: inline-block;
     padding: 0px 8px 0px 8px !important;
     margin: 0px;
   }
   
-  .overlay {
+.overlay {
     display: none;
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
@@ -206,7 +215,7 @@ h2 {
     animation-duration: 0.4s
   }
   
-  .topBar {
+.topBar {
     font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Sans-serif !important;
     font-size: 12px;
     display: block;
@@ -218,26 +227,26 @@ h2 {
     /* padding: 8px 0px 0px 0px; */
   }
   
-  .topMenuItem:hover {
+.topMenuItem:hover {
     color:blue;
     
   }
   
-  .userNameDropper {
+.userNameDropper {
     display: none;
   
   }
-  .userNameDropper:hover {
+.userNameDropper:hover {
     color:blue;
   }
   
   /* Add Animation */
-  @keyframes slideFromTop {
+@keyframes slideFromTop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
   }
   
-  @keyframes slideFromLeft {
+@keyframes slideFromLeft {
     from {left: -300px; opacity: 0}
     to {left: 0; opacity: 1}
   }

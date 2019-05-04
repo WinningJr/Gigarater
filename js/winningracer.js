@@ -31,6 +31,7 @@ var winningracer = {
         winningracer.minutes = "00";
         winningracer.seconds = "00";
         winningracer.milliseconds = "0";
+        document.getElementById("divTop").style.webkitAppRegion = "drag";
     },
 
     uiControl: function(){

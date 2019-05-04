@@ -7,7 +7,7 @@ const electron = require ('electron');
 const Menu = electron.Menu;
 const MenuItem = electron.MenuItem;
 let win;
-
+let winSettings;
 
 
 function createWindow() {
@@ -28,6 +28,10 @@ function createWindow() {
 
     win.on('closed', () => {
         win = null;
+        if (winSettings) {
+            winSettings.close();
+            winSettings = null;
+        }
     });
 }
 
@@ -76,10 +80,38 @@ app.on ('ready', function () {
         id: 'miUnpauseTimer',
         visible: false,
         click: function() {
-            win.webContents.send('StartStopTimer', 'Pause');
-            ctxMenu.getMenuItemById('miPauseTimer').visible = false;
-            ctxMenu.getMenuItemById('miStopTimer').visible = false;
-            ctxMenu.getMenuItemById('miStartTimer').visible = false;
+            // win.webContents.send('StartStopTimer', 'Pause');
+            // ctxMenu.getMenuItemById('miPauseTimer').visible = false;
+            // ctxMenu.getMenuItemById('miStopTimer').visible = false;
+            // ctxMenu.getMenuItemById('miStartTimer').visible = false;
+        }
+    }));
+
+    ctxMenu.append(new MenuItem( {
+        label: 'Settings',
+        id: 'miSettings',
+        click: function() {
+            if (!winSettings) {
+                winSettings = new BrowserWindow ({ 
+                    y: win.y + 24,
+                    width: 320,  
+                //  frame:false, 
+                    webPreferences: {
+                        nodeIntegration: false,
+                        preload: __dirname + "/js/preload.js"
+                    },
+                    icon:__dirname+'/img/zelda.png'});
+                    winSettings.setMenuBarVisibility(false)
+                    winSettings.loadURL (url.format({
+                    pathname: path.join(__dirname, 'settings.htm'),
+                    protocol: 'file:',
+                    slashes:true
+                }))
+            
+                winSettings.on('closed', () => {
+                    winSettings = null;
+                });
+            }
         }
     }));
 
