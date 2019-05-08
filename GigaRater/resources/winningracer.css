@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'digital';
+  src: url('./digital-7 (mono).ttf');
+}
+
+html {
+  padding: 0px;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 9px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.dialogButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 28px;
+  /* margin: 8px 0; */
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.dialogButton:hover {
+  opacity: 0.8;
+}
+
+.dialogButton:active:hover {
+  background-color: rgb(36, 109, 39);
+}
+
+h2 {
+  margin: 0px;
+}
+  
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+  
+img.logo {
+  width: 22px;
+  height: 24px;
+  border-radius: 50%;
+  margin-bottom: -4px;
+}
+
+
+.buttonHolder {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.clock {
+  font-family: 'digital'; 
+  color:red; 
+  background-color:black;
+  font-size: 42px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+  
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+.login {
+    width:360px;
+    background-color: white;
+  }
+
+.container { 
+    padding: 16px;
+  }
+
+.messageDialog {
+    width:260px;
+    margin: auto auto; 
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
+  }
+  
+.crossMenuItem {
+    display: inline-block;
+    padding: 0px 8px 0px 8px !important;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+.menuDividerItem {
+    border-left: 1px #909090 solid;
+    display: inline-block;
+    padding: 0px 8px 0px 8px !important;
+    margin: 0px;
+  }
+  
+.minibutton {
+  align-self:flex-end; 
+  padding:9px 8px; 
+  margin-left: 4px;
+  height: 36px;
+  margin-top:6px;
+  margin-bottom:8px;
+  background-color: white;
+  width: 34px;
+  border: 1px solid  #ccc;
+}  
+
+.minibutton:active:hover {
+  background-color: rgb(214, 211, 211);
+}
+
+.overlay {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 30px; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    animation-name: slideFromTop;
+    animation-duration: 0.4s
+  }
+  
+.topBar {
+    font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Sans-serif !important;
+    font-size: 12px;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    height: 24px;
+    width: 100%;
+    margin: 0px;
+    /* padding: 8px 0px 0px 0px; */
+  }
+  
+.topMenuItem:hover {
+    color:blue;
+    
+  }
+  
+

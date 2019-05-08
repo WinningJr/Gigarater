@@ -1,0 +1,40 @@
+ 
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./resources/winningracer.css">
+    <script src="../js/winningracer.js"></script>
+    <script src="../js/AuthService.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body id="gigaRater"   onload='loginWindow.loginInit()' style="display: flex; width:378px; height: 310px;">
+
+<div class="login" id='divLogin'>
+    <div class="dialogTopBar">
+
+    </div>
+    <div >
+        <h2 style="text-align: center; margin: 5px;">Speed Run Fun</h2>
+    </div>
+    <div class="container">
+        <label><b>Login</b></label>
+        <div style="display:flex;  align-items: flex-start;">
+            <input type="text" placeholder="Enter Username" id="txtEmailAddress" required>
+            <button tabindex="-1" class="minibutton"  id="imgForgotUserName"><img src="./resources/img/questionmark.png"/></button>
+        </div> 
+        
+        <label><b>Password</b></label>
+        <div style="display:flex;  align-items: flex-start;">
+            <input type="password" onkeypress="loginWindow.fnPasswordKeyClick(event, this)" placeholder="Enter Password" id="txtPassword" required>            
+            <button tabindex="-1" class="minibutton"  id="imgForgotPassword"><img src="./resources/img/questionmark.png"/></button>
+        </div>       
+    </div>
+    <div class="buttonHolder">
+        <button class="dialogButton" onclick="loginWindow.loginClicked()">Login</button>
+    </div>
+
+</div> 
+
+<div id="divMessageDialogOverlay" class="overlay"></div>
+</body>
+</hmtl>
