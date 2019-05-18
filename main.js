@@ -11,7 +11,7 @@ const ctxMenu = new Menu();
 
 const gigaMenus = require ('./js/GigaMenus.js')
 
-let HiMe;
+let HiMe; 
 let winManageSplits;
 let winSettings;
 let win;
