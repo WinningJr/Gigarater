@@ -31,7 +31,7 @@ const store = new Store({
 app.on ('ready', function () {
     createMainWindow();
 
-    ipcMain.on('gigaRaterResize', (event, sender, width, height) => {
+    ipcMain.on('gigaraterResize', (event, sender, width, height) => {
         if (height) {
             if (sender=='index'){     
                 // only set the height from the renderer app
@@ -84,7 +84,7 @@ function createMainWindow() {
     });
     win.setMenuBarVisibility(false)
     win.loadURL (url.format({
-        pathname: path.join(__dirname, 'GigaRater/index.htm'),
+        pathname: path.join(__dirname, 'Gigarater/index.htm'),
         protocol: 'file:',
         slashes:true
     }))
@@ -155,7 +155,7 @@ var mainFunctions = {
                 icon:__dirname+'/img/zelda.png'});
                 winLogin.setMenuBarVisibility(false)
                 winLogin.loadURL (url.format({
-                pathname: path.join(__dirname, './gigaRater/login.htm'),
+                pathname: path.join(__dirname, './gigarater/login.htm'),
                 protocol: 'file:',
                 slashes:true
             }))
@@ -183,7 +183,7 @@ var mainFunctions = {
                 icon:__dirname+'/img/zelda.png'});
                 winSettings.setMenuBarVisibility(false)
                 winSettings.loadURL (url.format({
-                pathname: path.join(__dirname, './GigaRater/settings.htm'),
+                pathname: path.join(__dirname, './Gigarater/settings.htm'),
                 protocol: 'file:',
                 slashes:true
             }))
@@ -210,7 +210,7 @@ var mainFunctions = {
                 icon:__dirname+'/img/zelda.png'});
                 winManageSplits.setMenuBarVisibility(false)
                 winManageSplits.loadURL (url.format({
-                pathname: path.join(__dirname, './GigaRater/ManageSplits.htm'),
+                pathname: path.join(__dirname, './Gigarater/ManageSplits.htm'),
                 protocol: 'file:',
                 slashes:true
             }))

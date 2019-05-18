@@ -135,7 +135,7 @@ var winningracer = {
     sendResize: function (sender) {
         let height = document.body.clientHeight;
         let width = document.body.clientWidth;
-        window.ipcRenderer.send('gigaRaterResize', sender, width, height);
+        window.ipcRenderer.send('gigaraterResize', sender, width, height);
 
     },
 

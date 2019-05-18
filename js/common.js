@@ -134,7 +134,7 @@ var  common = {
    sendResize: function () {
       let height = document.body.clientHeight;
       let width = document.body.clientWidth;
-      window.ipcRenderer.send('gigaRaterResize', 'login', width, height);
+      window.ipcRenderer.send('gigaraterResize', 'login', width, height);
 
   }
 }
