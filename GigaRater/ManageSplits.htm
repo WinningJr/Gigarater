@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./resources/winningracer.css">
+    <script src="../js/winningracer.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/AuthService.js"></script>
+</head>
+<body onload='settingsWindow.windowInit()'>
+    <div id="divBody" style="display:flex; flex-direction: row; padding: 6px; background-color: #ccc; height: 428px;">
+
+        <div style="flex: none; background-color: white; display:flex; flex-direction: column; border: 1px solid rgb(141, 141, 141); margin:4px; width:100px; text-align: center;">
+            <span onclick="settingsWindow.generalSettingsClicked()" class="settingsButton">
+                <img src="./resources/img/house.png" draggable="false"/>General Settings</span>
+            <span onclick="settingsWindow.globalShortCutsClicked()" class="settingsButton">
+                <img src="./resources/img/shortcut.png" draggable="false"/>Global ShortCuts</span>
+        </div>
+
+        <div id="divGeneralSettings" class="settingsBox">
+            <input type="checkbox" id="cbShowServerMessages" onchange="settingsWindow.cbShowServerMessages(this)">
+            <label for="cbShowMainFrame">Show Server Messages</label>    
+        </div>
+
+        <div id="divGlobalShortCuts" class="settingsBox" style="display: none !important;">
+            <table>
+                <tr>
+                    <td><label for="cbShowMainFrame">Start / Split</label></td>
+                    <td><input  id="txtStartSplit"></td>
+                </tr>
+            </table>                      
+           
+        </div>
+    </div>  
+</body>
+</hmtl>   

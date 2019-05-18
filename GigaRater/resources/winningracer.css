@@ -142,6 +142,58 @@ img.logo {
     animation-duration: 0.4s
   }
   
+.settingsButton {
+  flex: none;
+  margin:6px;
+  padding:4px;
+  font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Sans-serif !important;
+  font-size: 12px;
+  border-radius: 8px;
+  height:104 !important;
+}
+
+.settingsButton:hover {
+  opacity: 0.8;
+  background-color: #ccc;
+}
+
+.settingsButton:active {
+  opacity: 1;
+  background-color: rgb(175, 174, 174);
+}
+
+.settingsBox {
+  background-color: white; 
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  flex: 1; 
+  border: 1px solid rgb(141, 141, 141); 
+  margin:4px;
+  padding: 8px;
+}
+
+.standardButton {
+    background-color: #4CAF50;
+    color: white;
+    /* padding: 12px 28px; */
+    /* margin: 8px 0; */
+    flex:none;
+    margin:4px;
+    border: none;
+    cursor: pointer;
+    width: 52px;
+    border-radius: 8px;
+}
+
+.standardButton:hover {
+  opacity: 0.8;
+}
+
+.standardButton:active:hover {
+  background-color: rgb(36, 109, 39);
+}
+
 .topBar {
     font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Sans-serif !important;
     font-size: 12px;

@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<hmtl>
 <head>
     <link rel="stylesheet" href="./resources/winningracer.css">
     <script src="../js/winningracer.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/AuthService.js"></script>
 </head>
-<body >
-    <div id="divTop" style="width:100%; height: 8px; background-color: transparent">
+<body onload='settingsWindow.windowInit()' >
+    <div id="divBody" style="display:flex; flex-direction: row; padding: 6px; background-color: #ccc; height: 428px;">
+
+        <div style="flex: none; background-color: white; display:flex; flex-direction: column; border: 1px solid rgb(141, 141, 141); margin:4px; width:100px; text-align: center;">
+            <span onclick="settingsWindow.generalSettingsClicked()" class="settingsButton">
+                <img src="./resources/img/house.png" draggable="false"/>General Settings</span>
+            <span onclick="settingsWindow.globalShortCutsClicked()" class="settingsButton">
+                <img src="./resources/img/shortcut.png" draggable="false"/>Global ShortCuts</span>
+        </div>
+
+        <div id="divGeneralSettings" class="settingsBox">
+            <span style="margin-bottom: 10px; font-weight: bold; align-self: center;">General Settings</span>
+            <div style="flex:1;">
+                <input type="checkbox" id="cbEnableGlobalShortcuts"  disabled=true>
+                <label for="cbShowMainFrame">Enable Global Shortcuts</label>    
+            </div>
+            <div style="padding:2px; flex: none; height:32px; display:flex; justify-content: flex-end; background-color: rgb(228, 226, 226)">
+                <button class="standardButton" id="btnGeneralSave" style="visibility: hidden" onclick="settingsWindow.btnGeneralSaveClick(this)">Save</button>
+                <button onclick="settingsWindow.btnGeneralEditCancelClick(this)" class="standardButton" id="btnGeneralEditCancel" >Edit</button>
+            </div>            
+        </div>
+
+        <div id="divGlobalShortCuts" class="settingsBox" style="display: none !important;">
+            <span style="margin-bottom: 10px; font-weight: bold; align-self: center;">Gobal Shortcuts</span>
+            <div  style="flex:1;">
+                <table>
+                    <tr>
+                        <td><label for="txtStartSplit">Start / Split</label></td>
+                        <td><input  id="txtStartSplit" 
+                            disabled=true 
+                            data-key=''
+                            data-ctrl-pressed=false
+                            onkeyup="settingsWindow.txtStartKeyUp(this)"
+                            onkeypress="settingsWindow.txtStartSplitKeyPress(this)"></td>
+                    </tr>
+                </table>      
+            </div>                
+            <div style="padding:2px; flex: none; height:32px; display:flex; justify-content: flex-end; background-color: rgb(228, 226, 226)">
+                <button class="standardButton" id="btnSave" style="visibility: hidden" onclick="settingsWindow.btnSaveClick(this)">Save</button>
+                <button onclick="settingsWindow.btnEditCancelClick(this)" class="standardButton" id="btnEditCancel" >Edit</button>
+            </div>
+        </div>
 
     </div>  
-
-    <div id="divBody" style="display: inline-block; width:100%; height: 100%">
-        <input type="checkbox" id="cbShowMainFrame"><label for="cbShowMainFrame">Show Frame</label>
- 
-    </div>
 </body>
 </hmtl>   

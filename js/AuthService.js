@@ -183,7 +183,6 @@ var authToken = {
         else {
             if (this.debug) console.log('No refresh token.token');
         }
-
     },	
 
     parseInfo: function() {
@@ -213,7 +212,6 @@ var authToken = {
         } else {
             window.localStorage.setItem(this.storage.prefix + tType,tValue);			
         }
-
 
         if (tType == "access_token") {
             this.loadTokensFromStorage();
